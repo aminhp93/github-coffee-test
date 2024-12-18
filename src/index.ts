@@ -1,4 +1,4 @@
-export const x = "Hello, world 8";
+export const x = "version 10";
 
 export * from "./sum";
 export * from "./utils";
