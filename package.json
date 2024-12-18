@@ -1,20 +1,16 @@
 {
   "name": "github-coffee-test",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./utils": "./dist/utils/index.js",
+    "./sum": "./dist/sum.js"
   },
   "scripts": {
-     "build": "tsc",
-  "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@types/node": "^22.10.2",
     "typescript": "^5.7.2"
