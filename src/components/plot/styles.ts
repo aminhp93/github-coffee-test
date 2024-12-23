@@ -3,7 +3,8 @@ import Box from "@mui/material/Box";
 import type { BoxProps } from "@mui/material/Box";
 import { PlotType, PlotDataType } from "./types";
 
-export const StyledBoxContainer = styled(Box)(({ theme }) => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledBoxContainer: any = styled(Box)(({ theme }) => ({
   width: "100%",
   height: "100%",
   display: "flex",
@@ -15,7 +16,8 @@ type BoxChartContainerProps = BoxProps & {
   dataType: PlotType;
 };
 
-export const StyledBoxChartContainer = styled(Box, {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledBoxChartContainer: any = styled(Box, {
   shouldForwardProp: (prop) => prop !== "dataType",
 })<BoxChartContainerProps>(({ dataType }) => ({
   position: "relative",

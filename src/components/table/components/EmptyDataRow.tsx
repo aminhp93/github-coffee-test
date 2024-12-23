@@ -14,7 +14,8 @@ const EmptyDataRow = () => {
 
 export { EmptyDataRow };
 
-export const StyledBoxEmptyViewContainer = styled(Box)(() => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledBoxEmptyViewContainer: any = styled(Box)(() => ({
   height: "100%",
   width: "100%",
   textAlign: "center",

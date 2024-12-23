@@ -3,7 +3,8 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import type { BoxProps } from "@mui/material/Box";
 
-export const StyledBoxRoot = styled(Box)(({ theme }) => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledBoxRoot: any = styled(Box)(({ theme }) => ({
   alignItems: "center",
   display: "grid",
   gridTemplateColumns: "auto auto 1fr auto",
@@ -22,7 +23,8 @@ export const StyledBoxRoot = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const StyledBoxIcon = styled(Box)(({ theme }) => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledBoxIcon: any = styled(Box)(({ theme }) => ({
   alignItems: "center",
   fontSize: 0,
   cursor: "pointer",
@@ -38,20 +40,23 @@ export const StyledBoxIcon = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const StyledBoxText = styled(Box)(() => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledBoxText: any = styled(Box)(() => ({
   paddingInlineStart: "8px",
   overflow: "hidden",
   whiteSpace: "nowrap",
 }));
 
-export const StyledText = styled(Typography)(({ theme }) => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledText: any = styled(Typography)(({ theme }) => ({
   textOverflow: "ellipsis",
   whiteSpace: "nowrap",
   overflow: "hidden",
   color: theme.palette.text.primary,
 }));
 
-export const StyledBoxTypeIcon = styled(Box)(({ theme }) => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledBoxTypeIcon: any = styled(Box)(({ theme }) => ({
   alignItems: "center",
   display: "flex",
   ".MuiSvgIcon-root": {
@@ -62,8 +67,8 @@ export const StyledBoxTypeIcon = styled(Box)(({ theme }) => ({
 interface ActionsGroupProps extends BoxProps {
   show?: boolean;
 }
-
-export const StyledBoxActionsGroup = styled(Box, {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledBoxActionsGroup: any = styled(Box, {
   shouldForwardProp: (prop) => prop !== "show",
 })<ActionsGroupProps>(({ theme, show }) => ({
   alignItems: "center",

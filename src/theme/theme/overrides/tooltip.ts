@@ -1,7 +1,8 @@
 // ** MUI Imports
 import { Theme } from "@mui/material/styles";
 
-const Tooltip = (theme: Theme) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Tooltip: any = (theme: Theme) => {
   return {
     MuiTooltip: {
       styleOverrides: {

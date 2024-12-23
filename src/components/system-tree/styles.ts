@@ -2,7 +2,8 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { styled } from "@/theme";
 
-export const StyledBoxContainer = styled(Box)(({ theme }) => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledBoxContainer: any = styled(Box)(({ theme }) => ({
   overflow: "auto",
   display: "flex",
   flexFlow: "column",
@@ -11,7 +12,8 @@ export const StyledBoxContainer = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
 }));
 
-export const StyledBoxHeader = styled(Box)(() => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledBoxHeader: any = styled(Box)(() => ({
   width: "100%",
   display: "flex",
   justifyContent: "space-between",
@@ -23,14 +25,16 @@ export const StyledBoxHeader = styled(Box)(() => ({
   },
 }));
 
-export const StyledBoxContent = styled(Box)(() => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledBoxContent: any = styled(Box)(() => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
   flex: "1 1 auto",
 }));
 
-export const StyledTypography = styled(Typography)(({ theme }) => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledTypography: any = styled(Typography)(({ theme }) => ({
   fontWeight: theme.typography.fontWeightBold,
   fontSize: theme.typography.fontSize,
 }));

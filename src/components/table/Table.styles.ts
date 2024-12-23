@@ -4,7 +4,8 @@ import { DataGridPremium, gridClasses } from "@mui/x-data-grid-premium";
 // Import local files
 import { FOOTER_HEIGHT } from "./Table.constants";
 
-export const StyledDataGridPremium = styled(DataGridPremium)(({ theme }) => ({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledDataGridPremium: any = styled(DataGridPremium)(({ theme }) => ({
   ".MuiDataGrid-cell--pinnedLeft, .MuiDataGrid-cell--pinnedRight": {
     backgroundColor: theme.palette.background.paper,
   },

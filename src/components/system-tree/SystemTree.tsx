@@ -308,7 +308,8 @@ interface CustomBoxProps extends BoxProps {
   disabled?: boolean;
 }
 
-export const StyledBoxRootContainer = styled(Box, {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const StyledBoxRootContainer: any= styled(Box, {
   shouldForwardProp: (prop) => prop !== "disabled",
 })<CustomBoxProps>(({ theme, disabled }) => ({
   opacity: disabled ? 0.5 : 1,

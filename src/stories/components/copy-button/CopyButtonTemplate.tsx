@@ -6,7 +6,8 @@ import Box from "@mui/material/Box";
 
 const Template: StoryFn<PropsCopyButton> = (args) => <CopyButton {...args} />;
 
-export const Primary = Template.bind({});
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const Primary: any = Template.bind({});
 Primary.args = {
   copyContent: "Sample text to copy",
   edge: "start",

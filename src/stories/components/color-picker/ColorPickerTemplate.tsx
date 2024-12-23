@@ -7,7 +7,8 @@ import { log } from "@/utils/logger";
 
 const Template: StoryFn<PropsColorPicker> = (args) => <ColorPicker {...args} />;
 
-export const Primary = Template.bind({});
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const Primary: any = Template.bind({});
 Primary.args = {
   variant: "textFiled",
   value: "#ff0000",

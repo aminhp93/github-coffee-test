@@ -1,6 +1,6 @@
 {
   "name": "github-coffee-test",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
@@ -30,8 +30,8 @@
     "@module-federation/utilities": "^3.1.7",
     "@mui/icons-material": "^5.14.19",
     "@mui/lab": "^5.0.0-alpha.170",
-    "@mui/material": "^5.16.12",
-    "@mui/styled-engine-sc": "^6.2.1",
+    "@mui/material": "^5.14.18",
+    "@mui/system": "^6.2.1",
     "@mui/utils": "^6.2.1",
     "@mui/x-data-grid-premium": "^7.6.0",
     "@mui/x-date-pickers": "^7.23.3",
@@ -39,6 +39,7 @@
     "@mui/x-tree-view": "^6.17.0",
     "@svgr/rollup": "^8.1.0",
     "axios": "^1.6.8",
+    "clsx": "^2.1.1",
     "dayjs": "^1.11.11",
     "highcharts": "^11.2.0",
     "highcharts-react-official": "^3.2.1",

@@ -1,4 +1,4 @@
-export const x = "version 17";
+export const x = "version 1.0.18";
 
 export * from "./sum";
 export * from "./utils";
