@@ -1,0 +1,17 @@
+export const ROWS_MOCK = Array.from({ length: 25 }, (_, i) => ({
+  id: i + 1,
+  priority: Math.random() < 1 / 3 ? "A" : Math.random() < 0.5 ? "B" : "C",
+  count: Math.floor(Math.random() * 100) + 1,
+  state: Math.random() < 0.5 ? "alarm" : "normal",
+  ack: Math.random() < 0.5 ? "acked" : "unAcked",
+  activated: new Date(),
+  objectName: `act_comError`,
+  optionalName: `_`,
+  description: `This is a description for row ${i + 1}`,
+  location: `S1`,
+  source: `_`,
+  ackedBy: `admin`,
+  alarmValue: `1`,
+  alarmType: `Alarm`,
+  comment: `_`,
+}));

@@ -11,7 +11,18 @@ import terser from "@rollup/plugin-terser";
 
 export default defineConfig(
   {
-    input: "src/index.ts",
+    input: [
+      "src/index.ts",
+      "src/utils/index.ts",
+      "src/components/index.ts",
+      "src/data-test/index.ts",
+      "src/events/index.ts",
+      "src/hooks/index.ts",
+      "src/services/index.ts",
+      "src/stores/index.ts",
+      "src/theme/index.ts",
+      "src/types/index.ts"
+    ],
     output: {
       dir: "dist",
       format: "esm",
