@@ -1,11 +1,11 @@
 import { styled } from "@/theme";
-import { DataGridPremium, gridClasses } from "@mui/x-data-grid-premium";
+import { DataGridPremium, gridClasses, DataGridPremiumProps } from "@mui/x-data-grid-premium";
+import { StyledComponent } from "@emotion/styled";
 
 // Import local files
 import { FOOTER_HEIGHT } from "./Table.constants";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledDataGridPremium: any = styled(DataGridPremium)(({ theme }) => ({
+export const StyledDataGridPremium: StyledComponent<DataGridPremiumProps> = styled(DataGridPremium)(({ theme }) => ({
   ".MuiDataGrid-cell--pinnedLeft, .MuiDataGrid-cell--pinnedRight": {
     backgroundColor: theme.palette.background.paper,
   },

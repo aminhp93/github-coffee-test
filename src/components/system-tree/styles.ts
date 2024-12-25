@@ -1,9 +1,12 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { styled } from "@/theme";
+import { StyledComponent } from "@emotion/styled";
+import type { TypographyProps } from "@mui/material/Typography";
+import type { BoxProps } from "@mui/material/Box";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledBoxContainer: any = styled(Box)(({ theme }) => ({
+
+export const StyledBoxContainer: StyledComponent<BoxProps> = styled(Box)(({ theme }) => ({
   overflow: "auto",
   display: "flex",
   flexFlow: "column",
@@ -12,8 +15,7 @@ export const StyledBoxContainer: any = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
 }));
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledBoxHeader: any = styled(Box)(() => ({
+export const StyledBoxHeader: StyledComponent<BoxProps> = styled(Box)(() => ({
   width: "100%",
   display: "flex",
   justifyContent: "space-between",
@@ -25,16 +27,14 @@ export const StyledBoxHeader: any = styled(Box)(() => ({
   },
 }));
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledBoxContent: any = styled(Box)(() => ({
+export const StyledBoxContent: StyledComponent<BoxProps> = styled(Box)(() => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
   flex: "1 1 auto",
 }));
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledTypography: any = styled(Typography)(({ theme }) => ({
+export const StyledTypography: StyledComponent<TypographyProps> = styled(Typography)(({ theme }) => ({
   fontWeight: theme.typography.fontWeightBold,
   fontSize: theme.typography.fontSize,
 }));

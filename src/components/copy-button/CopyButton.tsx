@@ -1,7 +1,7 @@
 import { useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
-// import CopyToClipboard from "react-copy-to-clipboard";
+import CopyToClipboard from "react-copy-to-clipboard";
 import { ContentCopy } from "@mui/icons-material";
 import { useTranslation } from "@/utils/translation";
 
@@ -12,9 +12,7 @@ export type PropsCopyButton = {
   edge?: Edge;
 };
 
-const CopyButton = ({ 
-  // copyContent,
-   edge }: PropsCopyButton) => {
+const CopyButton = ({ copyContent, edge }: PropsCopyButton) => {
   const { t } = useTranslation();
   const [isTooltipOpen, setIsTooltipOpen] = useState<boolean>(false);
 
@@ -38,9 +36,9 @@ const CopyButton = ({
         onMouseDown={handleMouseDown}
         edge={edge}
       >
-        {/* <CopyToClipboard text={copyContent}> */}
+        <CopyToClipboard text={copyContent}>
           <ContentCopy />
-        {/* </CopyToClipboard> */}
+        </CopyToClipboard>
       </IconButton>
     </Tooltip>
   );

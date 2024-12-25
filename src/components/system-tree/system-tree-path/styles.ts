@@ -1,8 +1,9 @@
 import Box from "@mui/material/Box";
 import { styled } from "@/theme";
+import type { BoxProps } from "@mui/material/Box";
+import { StyledComponent } from "@emotion/styled";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledBoxPath: any = styled(Box)(({ theme }) => ({
+export const StyledBoxPath: StyledComponent<BoxProps>  = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   border: `1px solid ${theme.palette.border}`,

@@ -34,6 +34,7 @@ import {
   StyledTypography,
 } from "./styles";
 import { styled } from "@/theme";
+import { StyledComponent } from "@emotion/styled";
 
 const SystemTreeComponent = (
   {
@@ -308,8 +309,7 @@ interface CustomBoxProps extends BoxProps {
   disabled?: boolean;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledBoxRootContainer: any= styled(Box, {
+export const StyledBoxRootContainer: StyledComponent<CustomBoxProps> = styled(Box, {
   shouldForwardProp: (prop) => prop !== "disabled",
 })<CustomBoxProps>(({ theme, disabled }) => ({
   opacity: disabled ? 0.5 : 1,

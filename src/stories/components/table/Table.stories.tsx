@@ -17,6 +17,7 @@ import {
 } from "@/components/table/Table.constants";
 import { Meta } from "@storybook/react";
 import { TableProps } from "@/components/table";
+import WrapperEditTableTemplate from "./EditTableTemplate";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -32,6 +33,7 @@ export const CheckboxSelectionTable = CheckboxSelectionTableTemplate.bind({});
 export const TableWidthActionCol = TableWidthActionColTemplate.bind({});
 export const RowContextMenuTable = RowContextMenuTableTemplate.bind({});
 export const NoRowTable = NoRowTableTemplate.bind({});
+export const EditTable = WrapperEditTableTemplate.bind({});
 
 PlaygroundTable.args = {
   checkboxSelection: false,

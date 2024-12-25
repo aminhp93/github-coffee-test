@@ -1,22 +1,21 @@
 {
   "name": "github-coffee-test",
-  "version": "1.0.18",
+  "version": "1.0.29",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
+  "module": "dist/index.esm.js",
   "exports": {
-    ".": "./dist/index.js",
-    "./utils": "./dist/utils/index.js",
-    "./components": "./dist/components/index.js",
-    "./data-test": "./dist/data-test/index.js",
-    "./events": "./dist/events/index.js",
-    "./hooks": "./dist/hooks/index.js",
-    "./services": "./dist/services/index.js",
-    "./stores": "./dist/stores/index.js",
-    "./theme": "./dist/theme/index.js",
-    "./types": "./dist/types/index.js"
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    },
+    "./types": "./dist/types/index.d.ts"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "rimraf dist && rollup -c",
     "storybook": "rimraf dist && storybook dev -p 6006"
   },
   "peerDependencies": {

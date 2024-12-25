@@ -1,10 +1,11 @@
 import { styled } from "@/theme";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import type { TypographyProps } from "@mui/material/Typography";
 import type { BoxProps } from "@mui/material/Box";
+import { StyledComponent } from "@emotion/styled";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledBoxRoot: any = styled(Box)(({ theme }) => ({
+export const StyledBoxRoot: StyledComponent<BoxProps> = styled(Box)(({ theme }) => ({
   alignItems: "center",
   display: "grid",
   gridTemplateColumns: "auto auto 1fr auto",
@@ -23,8 +24,7 @@ export const StyledBoxRoot: any = styled(Box)(({ theme }) => ({
   },
 }));
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledBoxIcon: any = styled(Box)(({ theme }) => ({
+export const StyledBoxIcon: StyledComponent<BoxProps> = styled(Box)(({ theme }) => ({
   alignItems: "center",
   fontSize: 0,
   cursor: "pointer",
@@ -40,23 +40,20 @@ export const StyledBoxIcon: any = styled(Box)(({ theme }) => ({
   },
 }));
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledBoxText: any = styled(Box)(() => ({
+export const StyledBoxText: StyledComponent<BoxProps> = styled(Box)(() => ({
   paddingInlineStart: "8px",
   overflow: "hidden",
   whiteSpace: "nowrap",
 }));
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledText: any = styled(Typography)(({ theme }) => ({
+export const StyledText: StyledComponent<TypographyProps> = styled(Typography)(({ theme }) => ({
   textOverflow: "ellipsis",
   whiteSpace: "nowrap",
   overflow: "hidden",
   color: theme.palette.text.primary,
 }));
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledBoxTypeIcon: any = styled(Box)(({ theme }) => ({
+export const StyledBoxTypeIcon: StyledComponent<BoxProps> = styled(Box)(({ theme }) => ({
   alignItems: "center",
   display: "flex",
   ".MuiSvgIcon-root": {
@@ -67,8 +64,8 @@ export const StyledBoxTypeIcon: any = styled(Box)(({ theme }) => ({
 interface ActionsGroupProps extends BoxProps {
   show?: boolean;
 }
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const StyledBoxActionsGroup: any = styled(Box, {
+
+export const StyledBoxActionsGroup: StyledComponent<ActionsGroupProps> = styled(Box, {
   shouldForwardProp: (prop) => prop !== "show",
 })<ActionsGroupProps>(({ theme, show }) => ({
   alignItems: "center",

@@ -161,8 +161,7 @@ const Table = ({
         slotProps={{
           toolbar: { ...CUSTOM_HEADER, ...customHeader },
           row: {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            onContextMenu: (e: any) => {
+            onContextMenu: (e) => {
               if (!rest.rowContextMenu) return;
               e.preventDefault();
               e.stopPropagation();

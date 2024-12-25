@@ -1,14 +1,13 @@
 // ColorPicker.stories.tsx
 import Box from "@mui/material/Box";
-import { StoryFn } from "@storybook/react";
+import { StoryFn, StoryObj } from "@storybook/react";
 
 import { ColorPicker, PropsColorPicker } from "@/components/color-picker";
 import { log } from "@/utils/logger";
 
 const Template: StoryFn<PropsColorPicker> = (args) => <ColorPicker {...args} />;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const Primary: any = Template.bind({});
+export const Primary: StoryObj<PropsColorPicker> = Template.bind({});
 Primary.args = {
   variant: "textFiled",
   value: "#ff0000",
